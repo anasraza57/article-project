@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <h1>{% trans Articles %}</h1>
+        <div class="row g-3">
+            {% for article in articles %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <a class="article-box" href="{% url 'detail' article.slug %}">
+                        <img class="article-img" src="{{ article.thumbnail }}" alt="{{ article.title }}">
+                        <div class="ps-2">
+                            <div class="article-title">
+                                {% trans article.title %}
+                            </div>
+                            <div class="article-content">
+                                {% trans article.content|safe %}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

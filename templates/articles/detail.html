@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <img class="article-detail-img" src="{{ article.image.url }}" alt="{% trans article.title %}">
+        <div class="article-detail-title">{% trans article.title %}</div>
+        <div class="article-detail-date">{{ article.created }}</div>
+        <div class="article-detail-content">
+            {% trans article.content|safe %}
+        </div>
+    </div>
+{% endblock %}
