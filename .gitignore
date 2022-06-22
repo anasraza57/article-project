@@ -1,5 +1,10 @@
 venv
 media
+._*
 .DS_Store
 .idea/
 db.sqlite3
+
+# Divio
+.divio
+/data.tar.gz
