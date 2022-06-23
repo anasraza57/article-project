@@ -15,13 +15,20 @@ class TimeStampedModel(models.Model):
         abstract = True
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=512)
+
+    def __str__(self):
+        return self.name
+
+
 class Article(TimeStampedModel):
     title = models.CharField(max_length=512)
     image = models.ImageField(upload_to='images/')
     thumbnail = models.CharField(max_length=10000, blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=100)
     content = models.TextField()
-    tags = TaggableManager()
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.title

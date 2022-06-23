@@ -4,8 +4,7 @@ media
 .DS_Store
 .idea/
 db.sqlite3
-ArticleProject/__pycache__/
-articles/__pycache__/
+*__pycache__/
 
 # Divio
 .divio

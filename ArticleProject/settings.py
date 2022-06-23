@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Third Party apps
-    'taggit',
     'django_summernote',
     'modeltranslation',
     'articles.apps.ArticlesConfig',
