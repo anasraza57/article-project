@@ -3,7 +3,6 @@ from io import BytesIO
 
 from PIL import Image
 from django.db import models
-from taggit.managers import TaggableManager
 
 
 # Create your models here.
