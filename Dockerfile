@@ -6,4 +6,5 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 COPY . /app/
+CMD python manage.py migrate
 CMD uwsgi --module=ArticleProject.wsgi --http=0.0.0.0:80
