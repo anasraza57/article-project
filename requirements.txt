@@ -25,3 +25,5 @@ tabulate==0.8.10
 urllib3==1.26.9
 uWSGI==2.0.20
 webencodings==0.5.1
+psycopg2
+psycopg2-binary
