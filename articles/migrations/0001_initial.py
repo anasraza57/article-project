@@ -8,9 +8,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        ('taggit', '0006_tag_name_de_tag_name_en'),
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
