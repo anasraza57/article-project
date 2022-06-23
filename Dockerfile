@@ -6,7 +6,6 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 COPY . /app/
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ADD entrypoint.sh /app
+RUN chmod +x *.sh
 CMD uwsgi --module=ArticleProject.wsgi --http=0.0.0.0:80
